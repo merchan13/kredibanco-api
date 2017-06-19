@@ -1,0 +1,2 @@
+class KrediRequestsController < ApplicationController
+end
