@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login!, only: [:create]
   before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
@@ -32,7 +33,14 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.permit(:email, :password, :password_confirmation, :document, :name, :lastname, :phone, :role)
+      params.require(:user).permit( :email,
+                                    :password,
+                                    :password_confirmation,
+                                    :name, 
+                                    :lastname, 
+                                    :phone, 
+                                    :active_user, 
+                                    :credit_score )
     end
 
     def set_user

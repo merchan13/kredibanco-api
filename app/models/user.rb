@@ -1,11 +1,11 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
+  validates_inclusion_of :active_user, in: [true, false]
   validates_presence_of :email,
                         :name,
                         :lastname,
                         :phone,
-                        :active_user,
                         :credit_score
 
   validates_uniqueness_of :email

@@ -4,14 +4,15 @@ class Kredi < ApplicationRecord
   # Prestamo
   has_many :payments
 
-  validates_presence_of :active,
-                        :finished,
-                        :kredi_start,
+  validates_inclusion_of :active, in: [true, false]
+  validates_inclusion_of :finised, in: [true, false]
+  validates_inclusion_of :bank_arrears, in: [true, false]
+  
+  validates_presence_of :kredi_start,
                         :kredi_end,
                         :annual_interest,
                         :payments,
                         :payments_amount,
-                        :adequate_amout,
-                        :final_amount,
-                        :bank_arrearsm
+                        :adequate_amount,
+                        :final_amount
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170619053422) do
+ActiveRecord::Schema.define(version: 20170619191324) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -56,9 +56,9 @@ ActiveRecord::Schema.define(version: 20170619053422) do
     t.float    "annual_interest",  null: false
     t.integer  "payments",         null: false
     t.float    "payments_amount",  null: false
-    t.float    "adequate_amout",   null: false
+    t.float    "adequate_amount",  null: false
     t.float    "final_amount",     null: false
-    t.boolean  "bank_arrearsm",    null: false
+    t.boolean  "bank_arrears",     null: false
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "kredi_request_id"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20170619053422) do
   create_table "payments", force: :cascade do |t|
     t.float    "amount",                 null: false
     t.boolean  "completed",              null: false
-    t.date     "estimated_payment_daye", null: false
+    t.date     "estimated_payment_date", null: false
     t.boolean  "on_time",                null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false

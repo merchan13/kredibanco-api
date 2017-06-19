@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :users
-
   resources :users
+  resources :admins
+  resources :kredi_requests
+  resources :kredis
+  resources :payments
 
   post 'sign-in', to: 'sessions#create'
   delete 'sign-out', to: 'sessions#destroy'
