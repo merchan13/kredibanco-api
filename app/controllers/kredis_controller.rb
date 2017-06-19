@@ -38,7 +38,7 @@ class KredisController < ApplicationController
                                       :kredi_end,
                                       :annual_interest,
                                       :payments,
-                                      :payments_amount
+                                      :payments_amount,
                                       :adequate_amount,
                                       :final_amount,
                                       :bank_arrears,
