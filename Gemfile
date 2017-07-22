@@ -15,7 +15,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'figaro'
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :doc do
   gem 'sdoc', require: false
