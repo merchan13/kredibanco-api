@@ -7,9 +7,6 @@ end
 
 gem 'rails', '~> 5.0.3'
 gem 'puma', '~> 3.0'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
-# CUSTOM
 gem 'devise'
 gem 'devise-i18n'
 gem 'active_model_serializers'
@@ -18,6 +15,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'figaro'
+gem 'rack-cors'
 
 group :doc do
   gem 'sdoc', require: false
